@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    呵呵又是我
+    呵呵又是我2
     <router-view></router-view>
   </div>
 </template>
