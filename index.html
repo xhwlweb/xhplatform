@@ -2,10 +2,31 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>xhplatform</title>
+    <title>webvist</title>
+    <style media="screen">  
+    /* 简单进行默认样式重置 */
+      * {margin: 0;padding: 0}
+      li {list-style: none;}
+      a {text-decoration: none;}
+      img {vertical-align: middle;}
+      body {background-color: #ffffff}
+      html {background-color: #ffffff}
+    </style>
   </head>
   <body>
     <div id="app"></div>
+    <router-view></router-view>
     <!-- built files will be auto injected -->
   </body>
+  <script type="text/javascript">
+  /* rem布局，根据不同设备分辨率更改跟字体大小。 rem相关布局[请参考](http://www.jianshu.com/p/65f80d4b44bb)*/
+    (function(win,doc){
+          change();
+          function change(){
+              doc.documentElement.style.fontSize = doc.documentElement.clientWidth *100/1024+'px';
+          }
+          win.addEventListener('resize',change,false);
+          win.addEventListener('orientationchange',change,false);  /* 这个是移动端设备横屏、竖屏转换时触发的事件处理函数 */
+      })(window,document);
+  </script>
 </html>
