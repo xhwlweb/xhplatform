@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
+<<<<<<< HEAD
     <transition name="router-fade" mode="out-in">
       <keep-alive>
           <router-view v-if="$route.meta.keepAlive"></router-view>
@@ -9,6 +10,10 @@
       <transition name="router-fade" mode="out-in">
       <router-view v-if="!$route.meta.keepAlive"></router-view>
     </transition>
+=======
+    呵呵又是我
+    <router-view></router-view>
+>>>>>>> a3f38809a2b44528b72c0089b95a3958dc1b889b
   </div>
 </template>
 
